@@ -1,0 +1,12 @@
+# local secrets
+config.js
+.env
+
+# presentations kept on this computer only
+*.pdf
+*.pptx
+*.mp4
+
+.vscode/
+desktop.ini
+Thumbs.db

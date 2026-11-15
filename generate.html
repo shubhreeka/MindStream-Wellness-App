@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="generate.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recipe.html">Meditate With Us</a></li>
+                <li><a href="generate.html">Mood Quiz</a></li>
+                <li><a href="quiz.html">Wellness Chat</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Quiz Section -->
+    <section class="quiz-container">
+        <div class="quiz-header">
+            <h2>Hi! I am MindStreamAI </h2>
+            <p>Let me Recommend You Some Amazing Movies! Answer the following questions</p><br>
+        </div>
+
+    <!-- Quiz Form -->
+    <form id="quiz-form" onsubmit="event.preventDefault(); calculateScore();">
+        <!-- Question 1 -->
+        <div class="question">
+            <p>1. How often do you feel stressed in a week?</p>
+            <label><input type="radio" name="q1" value="A"> A) Rarely</label>
+            <label><input type="radio" name="q1" value="B"> B) Sometimes</label>
+            <label><input type="radio" name="q1" value="C"> C) Often</label>
+            <label><input type="radio" name="q1" value="D"> D) Always</label>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <p>2. Do you get enough sleep daily?</p>
+            <label><input type="radio" name="q2" value="A"> A) Yes, always</label>
+            <label><input type="radio" name="q2" value="B"> B) Sometimes</label>
+            <label><input type="radio" name="q2" value="C"> C) Rarely</label>
+            <label><input type="radio" name="q2" value="D"> D) No, never</label>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <p>3. Do you often feel overwhelmed by daily tasks?</p>
+            <label><input type="radio" name="q3" value="A"> A) No, I manage well</label>
+            <label><input type="radio" name="q3" value="B"> B) Sometimes</label>
+            <label><input type="radio" name="q3" value="C"> C) Often</label>
+            <label><input type="radio" name="q3" value="D"> D) Almost always</label>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <p>4. How often do you take breaks to relax?</p>
+            <label><input type="radio" name="q4" value="A"> A) Regularly</label>
+            <label><input type="radio" name="q4" value="B"> B) Occasionally</label>
+            <label><input type="radio" name="q4" value="C"> C) Rarely</label>
+            <label><input type="radio" name="q4" value="D"> D) Never</label>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <p>5. How do you feel about social interactions?</p>
+            <label><input type="radio" name="q5" value="A"> A) Energized</label>
+            <label><input type="radio" name="q5" value="B"> B) Neutral</label>
+            <label><input type="radio" name="q5" value="C"> C) Drained</label>
+            <label><input type="radio" name="q5" value="D"> D) Anxious</label>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <p>6. How often do you exercise or engage in physical activity?</p>
+            <label><input type="radio" name="q6" value="A"> A) Daily</label>
+            <label><input type="radio" name="q6" value="B"> B) Few times a week</label>
+            <label><input type="radio" name="q6" value="C"> C) Once a week</label>
+            <label><input type="radio" name="q6" value="D"> D) Never</label>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <p>7. Do you have someone to talk to when you feel down?</p>
+            <label><input type="radio" name="q7" value="A"> A) Always</label>
+            <label><input type="radio" name="q7" value="B"> B) Sometimes</label>
+            <label><input type="radio" name="q7" value="C"> C) Rarely</label>
+            <label><input type="radio" name="q7" value="D"> D) Never</label>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <p>8. How would you rate your self-esteem?</p>
+            <label><input type="radio" name="q8" value="A"> A) High</label>
+            <label><input type="radio" name="q8" value="B"> B) Moderate</label>
+            <label><input type="radio" name="q8" value="C"> C) Low</label>
+            <label><input type="radio" name="q8" value="D"> D) Very Low</label>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <p>9. Do you experience mood swings frequently?</p>
+            <label><input type="radio" name="q9" value="A"> A) No</label>
+            <label><input type="radio" name="q9" value="B"> B) Sometimes</label>
+            <label><input type="radio" name="q9" value="C"> C) Often</label>
+            <label><input type="radio" name="q9" value="D"> D) Very Frequently</label>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <p>10. How do you usually cope with stress?</p>
+            <label><input type="radio" name="q10" value="A"> A) Exercise or hobbies</label>
+            <label><input type="radio" name="q10" value="B"> B) Talking to someone</label>
+            <label><input type="radio" name="q10" value="C"> C) Overthinking</label>
+            <label><input type="radio" name="q10" value="D"> D) Avoiding it</label>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </div>
+</form>
+</div>
+    <div id="quiz-results"></div>
+
+    <script src="config.js"></script>
+    <script src="generate.js"></script>
+    <footer>
+        <p>&copy; 2025 MindStreamAI All rights reserved</p>
+    </footer>
+</body>
+</html>
